@@ -5,6 +5,7 @@ Rails.application.routes.draw do
         resources :users
         resources :tokens, only: [:create]
         resources :stickers, only: [:index, :show]
+        resources :projects, only: [:index, :show, :create, :update, :destroy]
       end
     end
 end
