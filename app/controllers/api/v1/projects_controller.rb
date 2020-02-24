@@ -41,6 +41,6 @@ class Api::V1::ProjectsController < ApplicationController
   end
 
   def render_error
-    render json: {error: @project.errors}, status: :unprocessable_entity
+    render json: {error: @project.errors.full_messages}, status: :unprocessable_entity
   end
 end

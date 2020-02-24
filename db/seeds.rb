@@ -30,3 +30,23 @@ end
 
 scrape
 puts "Done! Created #{Sticker.count} stickers"
+
+puts "Deleting all devices.."
+Device.delete_all
+puts "Creating new devices.."
+
+def create_device
+  Device.create(
+    name: "Macbook Air",
+    folder_name: "lowpoly_laptop_closed"
+  )
+  Device.create(
+    name: "Iphone X",
+    folder_name: "apple_iphone_xs_max"
+  )
+end
+
+create_device
+puts "Done! Created #{Device.count} devices."
+
+
