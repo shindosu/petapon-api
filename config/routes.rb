@@ -6,6 +6,8 @@ Rails.application.routes.draw do
         resources :tokens, only: [:create]
         resources :stickers, only: [:index, :show]
         resources :projects, only: [:index, :show, :create, :update, :destroy]
+        resources :device_instances, only: [:show, :create, :update, :destroy]
+        resources :sticker_instances, only: [:index, :show, :create, :update, :destroy]
       end
     end
 end
